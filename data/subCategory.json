@@ -1,0 +1,97 @@
+
+   [{
+        "name": "Тавилгын захиалгат үйлдвэрлэл",
+        "parentId": "6263ae6919ddda88f451dfe1"
+      },
+     {
+        "name": "Тавилгын материал",
+        "parentId": "6263ae6919ddda88f451dfe1"
+      },
+      {
+        "name": "Импортын тавилга",
+        "parentId": "6263ae6919ddda88f451dfe1"
+      },
+       {
+        "name": "Матрас",
+        "parentId": "6263ae6919ddda88f451dfe1"
+      },
+      {
+        "name": "Дулаалгын материал",
+        "parentId": "6263ae6919ddda88f451dfe2"
+      },
+      {
+        "name": "Хаалга, цоож",
+        "parentId": "6263ae6919ddda88f451dfe2"
+      },
+      {
+        "name": "Цонх",
+        "parentId": "6263ae6919ddda88f451dfe2"
+      },
+      {
+        "name": "Фасад",
+        "parentId": "6263ae6919ddda88f451dfe2"
+      },
+     {
+        "name": "Зуух",
+        "parentId": "6263ae6919ddda88f451dfe2"
+      },
+     {
+        "name": "Интерьер дизайны зураг, гүйцэтгэл",
+        "parentId": "6263ae6919ddda88f451dfe3"
+      },
+      {
+        "name": "Будаг, эмульс",
+        "parentId": "6263ae6919ddda88f451dfe3"
+      },
+    {
+        "name": "Шал түүний дагалдах материал",
+        "parentId": "6263ae6919ddda88f451dfe3"
+      },
+     {
+        "name": "Бетон хийц, замын хавтан",
+        "parentId": "6263ae6919ddda88f451dfe3"
+      },
+     {
+        "name": "Дуу чимээ тусгаарлах хавтан",
+        "parentId": "6263ae6919ddda88f451dfe3"
+      },
+     {
+        "name": "Ханын цаас",
+        "parentId": "6263ae6919ddda88f451dfe3"
+      },
+     {
+        "name": "Хивс, дрож, хулдаас",
+        "parentId": "6263ae6919ddda88f451dfe3"
+      },
+      {
+        "name": "Хуулга",
+        "parentId": "6263ae6919ddda88f451dfe3"
+      },
+      {
+        "name": "Байгалийн чулуу",
+        "parentId": "6263ae6919ddda88f451dfe3"
+      },
+     {
+        "name": "Плита",
+        "parentId": "6263ae6919ddda88f451dfe3"
+      },
+     {
+        "name": "Хөшиг, Тюль",
+        "parentId": "6263ae6919ddda88f451dfe3"
+      },
+     {
+        "name": "Декор",
+        "parentId": "6263a737931cef0ce0371577"
+      },
+     {
+        "name": "Хашаа",
+        "parentId": "6263ae6919ddda88f451dfe4"
+      },
+      {
+        "name": "Компьютер",
+        "parentId": "6263ae6919ddda88f451dfe8"
+      },
+       {
+        "name": "Бээлий",
+        "parentId": "6263ae6919ddda88f451dfe6"
+      }]
