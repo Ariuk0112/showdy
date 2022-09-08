@@ -63,17 +63,17 @@ app.use(bodyParser.text({ type: "*/xml" }));
 app.use(express.static("public"));
 app.use(fileupload());
 // main routes
-app.use("/api/tma/auth", require("./api/auth/router"));
+app.use("/api/showdy/auth", require("./api/auth/router"));
 
-app.use("/api/tma/coWorker", require("./api/coWorker/router"));
-app.use("/api/tma/project", require("./api/project/router"));
-app.use("/api/tma/category", require("./api/category/router"));
-app.use("/api/tma/userDetail", require("./api/user/router"));
-app.use("/api/tma/cars", require("./api/cars/router"));
-app.use("/api/tma/auction", require("./api/auction/router"));
-app.use("/api/tma/price", require("./api/price/router"));
-app.use("/api/tma/order", require("./api/orders/router"));
-app.use("/api/tma/equipment", require("./api/eqiupment/router"));
+app.use("/api/showdy/coWorker", require("./api/coWorker/router"));
+app.use("/api/showdy/project", require("./api/project/router"));
+app.use("/api/showdy/category", require("./api/category/router"));
+app.use("/api/showdy/userDetail", require("./api/user/router"));
+app.use("/api/showdy/cars", require("./api/cars/router"));
+app.use("/api/showdy/auction", require("./api/auction/router"));
+app.use("/api/showdy/price", require("./api/price/router"));
+app.use("/api/showdy/order", require("./api/orders/router"));
+app.use("/api/showdy/equipment", require("./api/eqiupment/router"));
 
 // ADMIN routes
 

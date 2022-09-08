@@ -5,33 +5,15 @@ const userSchema = new mongoose.Schema(
     phoneOtp: String,
     firstName: { type: String },
     lastName: { type: String },
-    address: { type: String },
-    email: String,
-    role: {
-      type: String,
-      default: "user",
-    },
+    birthday: { type: String },
+    preferredCategory: [
+      {
+      cat_id : {
+        type : mongoose.Schema.ObjectId,
+      }
+    }],
     isAccountVerified: String,
-    passportImg: [
-      {
-        img: {
-          type: String,
-        },
-        porder: String,
-      },
-    ],
-    passportExpireDate: String,
-    driverLicenseImg: [
-      {
-        img: {
-          type: String,
-        },
-        dlorder: String,
-      },
-    ],
-    driverLicenseExpireDate: String,
-    driverLicenseNumber: String,
-    ContractNumber: Number,
+    createdAt: { type: Date, default: Date.now() },
   },
   {
     timestamps: true,

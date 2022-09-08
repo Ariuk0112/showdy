@@ -5,6 +5,9 @@ const category = new mongoose.Schema(
       type: String,
       unique: true,
     },
+    icon: {
+      type: String,
+    },
   },
   {
     toObject: {

@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const { transliterate, slugify } = require("transliteration");
-const carFactory = new mongoose.Schema(
+const category = new mongoose.Schema(
   {
-    factory: {
+    name: {
       type: String,
       unique: true,
     },
@@ -10,4 +10,4 @@ const carFactory = new mongoose.Schema(
   { toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
 
-module.exports = mongoose.model("carFactory", carFactory);
+module.exports = mongoose.model("category", category);

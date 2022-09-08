@@ -90,11 +90,12 @@ module.exports = {
 
       return res.status(200).json({
         success: 1,
+        otp: otp,
         username: req.body.phone,
         user_id: item._id,
       });
     }
-    message(user.phone, otp);
+    // message(user.phone, otp);
   }),
   login: asyncHandler(async (req, res) => {
     if (req.body.username && req.body.password) {
@@ -142,7 +143,7 @@ module.exports = {
         );
       }
       const item = await query;
-      message(phone, otp);
+      // message(phone, otp);
       res.status(200).json({
         success: true,
         message: "Баталгаажуулах код бүртгэлтэй дугаарлуу илгээгдлээ",
@@ -155,8 +156,8 @@ module.exports = {
   }),
 
   verifyPhoneOtp: asyncHandler(async (req, res) => {
-    const { otp, userId } = req.body;
-    const user = await User.findById(userId);
+    const { otp, phone } = req.body;
+    const user = await User.findOne({ phone });
     if (!user) {
       throw new Error("Мэдээлэл олдсонгүй !");
     }
@@ -215,66 +216,4 @@ module.exports = {
       data: vol,
     });
   }),
-  resetPassword: (req, res) => {
-    db.query(
-      "call sp_resetPassword(?)",
-      [req.body.username],
-      (err, results) => {
-        if (err && err.message.startsWith("ER_SIGNAL_EXCEPTION")) {
-          return res.json({
-            success: 0,
-            message: err.message.replace("ER_SIGNAL_EXCEPTION: ", ""),
-          });
-        } else if (err) {
-          return res.status(500).json({
-            success: 0,
-            message: err.message,
-          });
-        }
-
-        // And now we should send new password to user
-        console.log(
-          `New password for ${req.body.username} => ${results[0][0].newPassword}`
-        );
-
-        // email?
-        mail.sendMail({
-          title: "New password",
-          to: req.body.username,
-          htmlPath: "password-reset.html",
-          replacements: {
-            username: results[0][0].acc_fname,
-            newpassword: results[0][0].newPassword,
-          },
-        });
-
-        return res.json({
-          success: 1,
-        });
-      }
-    );
-  },
-  changePassword: (req, res) => {
-    db.query(
-      "call sp_changepass(?,?,?)",
-      [req.data.username, req.body.oldPassword, req.body.newPassword],
-      (err, results) => {
-        if (err && err.message.startsWith("ER_SIGNAL_EXCEPTION")) {
-          return res.json({
-            success: 0,
-            message: err.message.replace("ER_SIGNAL_EXCEPTION: ", ""),
-          });
-        } else if (err) {
-          return res.status(500).json({
-            success: 0,
-            message: err.message,
-          });
-        }
-
-        return res.json({
-          success: 1,
-        });
-      }
-    );
-  },
 };
