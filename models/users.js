@@ -8,10 +8,15 @@ const userSchema = new mongoose.Schema(
     birthday: { type: String },
     preferredCategory: [
       {
-      cat_id : {
-        type : mongoose.Schema.ObjectId,
-      }
-    }],
+        cat_id: {
+          type: mongoose.Schema.ObjectId,
+        },
+      },
+    ],
+    acc_type: {
+      type: String,
+      default: "User",
+    },
     isAccountVerified: String,
     createdAt: { type: Date, default: Date.now() },
   },
